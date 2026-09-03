@@ -50,11 +50,8 @@ At the core of EvoDomain is a **memetic search strategy**, combining evolutionar
 The search is designed to discover feasible regions rather than simply generate arbitrary input values. DBSCAN is then used to identify disconnected subdomains and retain a diverse set of boundary candidates.
 
 <p align="center">
-  <img src="docs/images/ex1.gif" alt="EvoDomain domain generation example 1" width="680">
-</p>
-
-<p align="center">
-  <img src="docs/images/ex2.gif" alt="EvoDomain domain generation example 2" width="680">
+  <img src="docs/images/ex1.gif" alt="EvoDomain domain generation example 1" width="420">
+  <img src="docs/images/ex2.gif" alt="EvoDomain domain generation example 2" width="420">
 </p>
 
 ---
