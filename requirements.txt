@@ -1,0 +1,12 @@
+astor
+astunparse
+cvxpy
+deap
+graphviz
+matplotlib
+networkx
+numpy
+pandas
+scikit-learn
+tqdm
+truths

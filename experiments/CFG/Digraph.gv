@@ -1,0 +1,22 @@
+digraph {
+	1 [label="1: enter: equation1(x, y)" peripheries=2 shape=oval]
+	0 [label="1: exit: equation1(x, y)" peripheries=2 shape=oval]
+	8 -> 0
+	7 -> 0 [label=F color=red]
+	6 -> 0 [label=F color=red]
+	5 -> 0 [label=F color=red]
+	2 [label="2: k = y ** 2" peripheries=1 shape=rectangle]
+	1 -> 2
+	3 [label="3: h = math.sin(math.radians(x * 30))" peripheries=1 shape=rectangle]
+	2 -> 3
+	4 [label="4: l = math.cos(math.radians(x * 40))" peripheries=1 shape=rectangle]
+	3 -> 4
+	5 [label="5: if: k >= x * 10" peripheries=1 shape=diamond]
+	4 -> 5
+	6 [label="6: if: y <= h * 25" peripheries=1 shape=diamond]
+	5 -> 6 [label=T color=blue]
+	7 [label="7: if: y >= l * 15" peripheries=1 shape=diamond]
+	6 -> 7 [label=T color=blue]
+	8 [label="8: return True" peripheries=1 shape=rectangle]
+	7 -> 8 [label=T color=blue]
+}
