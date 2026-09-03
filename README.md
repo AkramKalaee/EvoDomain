@@ -16,7 +16,7 @@ EvoDomain addresses this limitation by searching for test data close to the boun
 
 The key idea is simple:
 
-**Don't only ask whether a condition has been exercised — explore where its feasible domain begins and ends.**
+> **Don't only ask whether a condition has been exercised — explore where its feasible domain begins and ends.**
 
 ---
 
@@ -41,6 +41,10 @@ The main workflow is:
   <img src="docs/images/diagram.png" alt="EvoDomain architecture" width="780">
 </p>
 
+<p align="center">
+  <sub><b>Figure 1.</b> Overview of the EvoDomain domain-oriented test suite generation approach.</sub>
+</p>
+
 ---
 
 ## 🧬 Boundary-Oriented Search
@@ -49,10 +53,18 @@ At the core of EvoDomain is a **memetic search strategy**, combining evolutionar
 
 The search is designed to discover feasible regions rather than simply generate arbitrary input values. DBSCAN is then used to identify disconnected subdomains and retain a diverse set of boundary candidates.
 
-<p align="center">
-  <img src="docs/images/ex1.gif" alt="EvoDomain domain generation example 1" width="420">
-  <img src="docs/images/ex2.gif" alt="EvoDomain domain generation example 2" width="420">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/images/ex1.gif" alt="EvoDomain domain generation example 1" width="400"><br>
+      <sub><b>Figure 2.</b> Domain generation example 1.</sub>
+    </td>
+    <td align="center">
+      <img src="docs/images/ex2.gif" alt="EvoDomain domain generation example 2" width="400"><br>
+      <sub><b>Figure 3.</b> Domain generation example 2.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -83,6 +95,10 @@ This demonstrates that domain-oriented test generation is not simply a matter of
   <img src="docs/images/search-effectiveness.png" alt="Search effectiveness comparison between EvoDomain and Random Search" width="760">
 </p>
 
+<p align="center">
+  <sub><b>Figure 4.</b> Search effectiveness comparison between EvoDomain and Random Search for feasible-domain identification.</sub>
+</p>
+
 ---
 
 ## Domain Coverage
@@ -95,6 +111,10 @@ The domain-coverage results show how effectively the selected approaches cover t
   <img src="docs/images/domain-coverage.png" alt="Domain coverage comparison" width="760">
 </p>
 
+<p align="center">
+  <sub><b>Figure 5.</b> Domain coverage achieved by the selected test generation approaches.</sub>
+</p>
+
 ---
 
 ## Fault Detection
@@ -103,12 +123,12 @@ The ultimate goal of test generation is not merely to achieve coverage, but to *
 
 EvoDomain was evaluated against conventional approaches across multiple fault types, including:
 
-* ROR — Relational Operator Replacement
-* CSM — Computational Shift Mutation
-* RVM — Relational Variable Mutation
-* AOR — Arithmetic Operator Replacement
-* LOR — Logical Operator Replacement
-* SD — Statement Deletion
+* **ROR** — Relational Operator Replacement
+* **CSM** — Computational Shift Mutation
+* **RVM** — Relational Variable Mutation
+* **AOR** — Arithmetic Operator Replacement
+* **LOR** — Logical Operator Replacement
+* **SD** — Statement Deletion
 
 Across **114 subject–fault-type cases**, EvoDomain achieved the highest fault detection in **74 cases**.
 
@@ -120,25 +140,27 @@ For example, EvoDomain increased the average fault detection associated with MC/
   <img src="docs/images/fault-detection-rate.png" alt="Average fault detection rate by fault type" width="760">
 </p>
 
+<p align="center">
+  <sub><b>Figure 6.</b> Average fault detection rate of the selected approaches across fault types.</sub>
+</p>
+
 ---
 
 ## 🏆 Key Findings
 
-The experimental results demonstrate that EvoDomain:
-
-| Finding                                              |        Result |
-| ---------------------------------------------------- | ------------: |
-| Subjects evaluated                                   |        **30** |
-| Classic subjects                                     |        **11** |
-| Industrial subjects                                  |        **19** |
-| Fault-detection cases with EvoDomain performing best |  **74 / 114** |
-| Improvement over MC/DC in fault detection            |    **74.44%** |
-| Improvement over RoRG in fault detection             |    **65.06%** |
-| Maximum support for fault types over MC/DC           |    **68.89%** |
-| Maximum support for fault types over RoRG            |    **66.33%** |
-| Convergence effectiveness improvement over COSMOS    |       **32%** |
-| Accuracy across predicate subjects                   | **0.99–1.00** |
-| F1-score across predicate subjects                   | **0.99–1.00** |
+| Finding                                           |        Result |
+| ------------------------------------------------- | ------------: |
+| Subjects evaluated                                |        **30** |
+| Classic subjects                                  |        **11** |
+| Industrial subjects                               |        **19** |
+| Cases with highest fault detection by EvoDomain   |  **74 / 114** |
+| Improvement over MC/DC in fault detection         |    **74.44%** |
+| Improvement over RoRG in fault detection          |    **65.06%** |
+| Maximum fault-type support over MC/DC             |    **68.89%** |
+| Maximum fault-type support over RoRG              |    **66.33%** |
+| Convergence effectiveness improvement over COSMOS |       **32%** |
+| Accuracy across predicate subjects                | **0.99–1.00** |
+| F1-score across predicate subjects                | **0.99–1.00** |
 
 These results suggest that explicitly targeting **feasible domain boundaries** can complement conventional logic-based coverage and reveal faults that may otherwise remain undetected.
 
@@ -250,7 +272,7 @@ EvoDomain investigates a fundamental limitation of conventional logic-based test
 
 By explicitly searching for feasible subdomains and their boundaries, EvoDomain introduces a complementary perspective on test adequacy — one that considers **where the behavior changes in the input domain**, rather than only whether logical conditions have been exercised.
 
-This work formed part of a broader research direction on **domain-oriented and behavioral testing of complex software and autonomous systems**.
+This work forms part of a broader research direction on **domain-oriented and behavioral testing of complex software and autonomous systems**.
 
 ---
 
